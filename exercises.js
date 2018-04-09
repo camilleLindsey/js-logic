@@ -64,8 +64,12 @@ console.log(login ("test123"))
  * The function will return true if the first number is greater than the second.
  * Console.log your result.
 */
-
-
+function isGreaterThan(first, second){
+  if (first > second){
+    return true;
+  } 
+}
+console.log(isGreaterThan(9, 7));
 
 /*
  * #4
@@ -78,8 +82,14 @@ console.log(login ("test123"))
  * The function will return true if the value passed into the function is "true".
  * Console.log your result.
 */
-
-
+function mustBeTrue(boo){
+if (boo === true){
+    return true; 
+  }else{
+    return false;
+  }
+}
+console.log(mustBeTrue(true));
 
 /*
  * #5
@@ -92,8 +102,13 @@ console.log(login ("test123"))
  * The function will return the message "Word to Big Bird!", if the string passed into the function is a three-letter word. 
  * Console.log your result.
 */
+function bigBird(word){
+  if(word.length === 3){
+    return "Word to Big Bird!";
+  }
+}
 
-
+console.log(bigBird("cat"))
 
 /*
  * #6
@@ -107,6 +122,16 @@ console.log(login ("test123"))
  * If the strings are equal, the function will return the message "You look mahvelous!" Otherwise, return the message: "I don't know who you are anymore." 
  * Console.log your result.
 */
+
+function isEqual(first, second){
+  if (first === second){
+return "You look mahvelous!";
+  }else{
+    return "I dont know who you are anymore.";
+  }
+}
+console.log(isEqual("runner","runner"))
+console.log(isEqual("seven", "7"));
 
 
 /*
@@ -122,6 +147,16 @@ console.log(login ("test123"))
  * Console.log your result.
 */
 
+function notEqual(first, second){
+  if ("first" !== "second"){
+    return "Opposites do attract.";
+  }else{
+    return "Cause it's like you're my mirror."
+  }
+}
+console.log(notEqual(2, 2))
+
+//console.log(notEqual(1, 2))
 
 /*
  * #8
@@ -135,7 +170,15 @@ console.log(login ("test123"))
  * Console.log your result.
 */ 
 
-
+function spareChange(money){
+  if (money > 100){
+return true;
+  }else{
+    return false;
+  
+  }
+}
+console.log(spareChange(50))
 
 /*
  * #9
@@ -151,7 +194,16 @@ console.log(login ("test123"))
  * Console.log your result.
 */ 
 
+function dirty30(one, two, three){
+  if (one + two + three > 30){
+return true;
+  }else{
+return false;
 
+  }
+}
+
+console.log(dirty30(10, 20, 3));
 
 /*
  * #10
@@ -165,8 +217,14 @@ console.log(login ("test123"))
  * Console.log your result.
 */ 
 
-
-
+function evenStevens(num){
+  if (num%2 === 0 ){
+return true;
+  }else{
+    return false;
+  }
+}
+console.log(evenStevens(5))
 
 /*
  * #11
@@ -181,6 +239,16 @@ console.log(login ("test123"))
  * Console.log your result.
 */ 
 
+function daClub (cover, age){
+  if (cover, age > 21){
+    return "Welcome to the Legends Lounge";
+  }else{
+    return "Chuck E Cheese is across the street";
+  
+  }
+}
+
+console.log(daClub(22, 12))
 
 /*
  * #12
@@ -195,7 +263,15 @@ console.log(login ("test123"))
  * Console.log your result.
 */ 
 
+function graduation (credits, thesis){
+  if (credits >= 120 || thesis === true){
+    return "Congratulations on a job well done";
+  }else{
+    return "See you in summer school";
 
+  }
+}
+console.log(graduation(10, true))
 
 /*
  * #13
@@ -205,11 +281,27 @@ console.log(login ("test123"))
  *  @param Datatype: Number `speed`
  *  @return Datatype: String
  *
- * The function will return the message: "You are riding Honolulu's Rail.", if the number value is less than 50, otherwise it will return the message: "You are riding an Amtrak.", if the number value is less than 100, and return the message: "Now you ballin' in the Shinkansen!", if the number value is greater than or equal to 100.
+ * The function will return the message: 
+ * "You are riding Honolulu's Rail.", 
+ * if the number value is less than 50, 
+ * otherwise
+ *  it will return the message: "You are riding an Amtrak.", 
+ * if the number value is less than 100, and return the message: "Now you ballin' in the Shinkansen!", 
+ * if the number value is greater than or equal to 100.
  * Console.log your result.
 */ 
 
+function moneyTrain (speed){
+if (speed > 50){
+  return "You are riding Honolulu's Rail";
+}else if(speed < 100){
+return "You are riding an Amtrak";
+}else{
+  return "now you ballin' in the Shinkansen!";
+}
+}
 
+console.log(moneyTrain(99))
 /*
  * #14
  * Function - buyDoughnut
@@ -218,17 +310,53 @@ console.log(login ("test123"))
  * Declare a variable named `doughnutBought` and assign it with a number value of 0.
  *
  * Create a function named `buyDoughnut` which takes NO parameters.
- * When the function is invoked, the budget will be decreased by the doughnutPrice and doughnutBought will increase by 1.
+ * When the function is invoked, 
+ * the budget will be decreased by the doughnutPrice and 
+ * doughnutBought will increase by 1.
  * Console.log budget and doughnutBought.
  * Invoke your function again.
  * Console.log budget and doughnutBought again.
 */ 
 
+var budget = 80;
+var doughnutPrice = 20;
+var doughnutBought = 0;
+
+function buyDoughnut (){ 
+  if(budget > doughnutPrice){
+    budget - doughnutPrice;
+    doughnutBought+1;
+   }
+}
+buyDoughnut();
+console.log("budget ", budget);
+console.log("bought ", doughnutBought);
+
+
+
+budget = 100;
+var doughnutPrice = 5;
+var doughnutBought = 0;
+
+function buyDoughnut(){
+ if(budget >= doughnutPrice){ 
+  budget -= doughnutPrice;
+  doughnutBought++;
+ }
+}
+
+buyDoughnut();
+console.log("budget ", budget);
+console.log("bought ", doughnutBought);
+
 /*Final Boss*/
 /*Create a function name dailySpecials which takes in a parameter: `special`.
 Inside the function, create a switch statement that will check the daily specials of your favorite restaurant (or make up your own daily specials for each day of the week.*/
 
+function dailySpecials (special){
 
+
+}
 
 /*
 For loops - A for loop checks a condition a specific number of times and allows us to execute a code block and evaluate a condition to determine if our loop should run again.
