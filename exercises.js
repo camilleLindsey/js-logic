@@ -333,30 +333,37 @@ console.log("budget ", budget);
 console.log("bought ", doughnutBought);
 
 
-
-budget = 100;
-var doughnutPrice = 5;
-var doughnutBought = 0;
-
-function buyDoughnut(){
- if(budget >= doughnutPrice){ 
-  budget -= doughnutPrice;
-  doughnutBought++;
- }
-}
-
-buyDoughnut();
-console.log("budget ", budget);
-console.log("bought ", doughnutBought);
-
 /*Final Boss*/
 /*Create a function name dailySpecials which takes in a parameter: `special`.
 Inside the function, create a switch statement that will check the daily specials of your favorite restaurant (or make up your own daily specials for each day of the week.*/
 
 function dailySpecials (special){
-
-
+switch (special) {
+  case 'monday':
+    menu = 'yogurt';
+    break;
+  case 'tuesday':
+  menu = 'acai bowls'
+    break;
+  case 'wednesday':
+  menu = 'sugar cane juice'
+    break;
+  case 'thursday':
+  menu = 'kale smoothie'
+    break; 
+  case 'friday':
+  menu = 'juiced greens';
+    break;
+  case 'saturday':
+  menu = 'coconut almond acai bowls';
+    break;
+case 'sunday':
+menu = 'pico de gallo';
+  break;
 }
+  return menu;
+}
+console.log(dailySpecials('thursday'));
 
 /*
 For loops - A for loop checks a condition a specific number of times and allows us to execute a code block and evaluate a condition to determine if our loop should run again.
@@ -385,6 +392,15 @@ for (var i = 0; i<toyotaModels.length; i++){
  * "Player: 5"
 */
 
+ var gamePlayer =["Player: 1", "Player: 2", "Player: 3", "Player: 4"];
+
+for (var v = 0; v<gamePlayer.length; v++){
+  console.log("Dolphins " + gamePlayer[v]);
+}
+
+for(var i = 1; i<=5; i++){
+  console.log("player ", i);
+}
 
 /* 
  * #16
