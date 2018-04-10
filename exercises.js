@@ -397,7 +397,7 @@ for (var i = 0; i<toyotaModels.length; i++){
 for (var v = 0; v<gamePlayer.length; v++){
   console.log("Dolphins " + gamePlayer[v]);
 }
-
+/*
 for(var i = 1; i<=5; i++){
   console.log("player ", i);
 }
@@ -408,6 +408,9 @@ for(var i = 1; i<=5; i++){
 */
   var myFavFoods = ["lemon bar", "carrot cake", "nachos", "bacon cheeseburger", "ramen", "sweet potato fries", "chimichanga"];
 
+  for (var i = 0; i<myFavFoods.length; i++){
+    console.log("yummy " + myFavFoods[i]);
+ }
 
 /*
  * #17
@@ -424,6 +427,21 @@ for(var i = 1; i<=5; i++){
  * Console.log your result.
 */
 
+var numArray = [10, 20, 30, 40, 50];
+var total = 0;
+function sumItUp (arr){
+ 
+  for(var i = 0; i<arr.length; i++){
+    console.log(arr[i]);
+    total += arr[i];
+ }
+ return total;
+
+}
+
+console.log("sumitup ", sumItUp(numArray));
+
+
 
 
 /*
@@ -439,6 +457,19 @@ for(var i = 1; i<=5; i++){
 */ 
 
 var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Sidney Deane", "World B Free"];
+var even = []
+var odd = []
+
+function allStars (ballers){
+  for(var i = 0; i < ballers.length; i++){
+    players [i].classname = "ballers " + i;
+    console.log(ballers[i]);
+    if (i%2 === 0){
+
+
+    }
+  }
+}
 /*
  * #19
  * Function - subways
