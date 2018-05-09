@@ -264,14 +264,14 @@ console.log(daClub(22, 12))
 */ 
 
 function graduation (credits, thesis){
-  if (credits >= 120 || thesis === true){
+  if (credits >= 120 || thesis === false){
     return "Congratulations on a job well done";
   }else{
     return "See you in summer school";
 
   }
 }
-console.log(graduation(10, true))
+console.log(graduation(111, true))
 
 /*
  * #13
@@ -296,8 +296,9 @@ if (speed > 50){
   return "You are riding Honolulu's Rail";
 }else if(speed < 100){
 return "You are riding an Amtrak";
-}else{
-  return "now you ballin' in the Shinkansen!";
+//}else{
+}else if (speed >= 100){  
+return "now you ballin' in the Shinkansen!";
 }
 }
 
@@ -336,6 +337,8 @@ console.log("bought ", doughnutBought);
 /*Final Boss*/
 /*Create a function name dailySpecials which takes in a parameter: `special`.
 Inside the function, create a switch statement that will check the daily specials of your favorite restaurant (or make up your own daily specials for each day of the week.*/
+//special should not be anywhere outside of the function
+
 
 function dailySpecials (special){
 switch (special) {
@@ -361,9 +364,50 @@ case 'sunday':
 menu = 'pico de gallo';
   break;
 }
-  return menu;
+return menu;
 }
+
 console.log(dailySpecials('thursday'));
+
+function dailySpecials (special){
+  switch (special) {
+    case 'monday':
+      return 'yogurt';
+    case 'tuesday':
+    return 'acai bowls'
+    case 'wednesday':
+    return 'sugar cane juice'
+    case 'thursday':
+    return 'kale smoothie'
+    case 'friday':
+    return 'juiced greens';
+      break;
+    case 'saturday':
+    return 'coconut almond acai bowls';
+  case 'sunday':
+ return 'pico de gallo';
+    break;
+  }
+  //return menu;
+  }
+
+  console.log(dailySpecials('thursday'));
+/*
+
+can use return instead of break
+
+var day = 'wednesday';
+var menu = null;
+
+funcrtion dailySpecials (special){
+  switch (special) {
+    case 'sunday':
+    menu = 'mushroom';
+    break;
+    case 'tuesday':
+
+  }
+}
 
 /*
 For loops - A for loop checks a condition a specific number of times and allows us to execute a code block and evaluate a condition to determine if our loop should run again.
@@ -457,19 +501,20 @@ console.log("sumitup ", sumItUp(numArray));
 */ 
 
 var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Sidney Deane", "World B Free"];
-var even = []
-var odd = []
+var even = [];
+var odd = [];
 
 function allStars (ballers){
   for(var i = 0; i < ballers.length; i++){
     players [i].classname = "ballers " + i;
     console.log(ballers[i]);
     if (i%2 === 0){
-
-
+    
     }
   }
 }
+
+
 /*
  * #19
  * Function - subways
@@ -484,6 +529,9 @@ function allStars (ballers){
 
   var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
 
+  function subwAys (special){
+    for (var i=0; i< special.length; i++)
+  }
 
 /*
 Final Boss
